@@ -1,0 +1,64 @@
+<input value='Dmitry' class='first-name-input default-input' id='first-name' />
+<input value='Kuzyuberdin' class='last-name-input default-input' id='last-name' />
+<input value='Minsk city' class='address-input default-input' id='address' />
+
+<select id='cities'>
+    <option value="Kiev">Kiev</option>
+    <option value="Minsk">Minsk</option>
+    <option value="Moscow" selected>Moscow</option>
+</select>
+
+<textarea id='hobbies'>JS, CSS, HTML</textarea>
+
+<div id='avatar-wrapper'>
+    <img id='avatar' src='https://pp.userapi.com/c631924/v631924026/44d7/AiFmeYaLmTc.jpg' alt='аватар' />
+</div>
+
+<button id='make-changes'>go</button>
+
+
+<script>
+    var goButton = document.getElementById('make-changes');
+    goButton.className = "butt";
+        // пишем свой код внутри фигурных {} скобок, это поможет нам выполнить код при нажатии на кнопку, а не сразу при загрузке страницы. Так интереснее. Потом поймём механизм нажатия на кнопки. Пока просто повторяем
+    goButton.onclick = function() {
+   //тому что слева, мы присваиваем то, что что справа 
+        //var firstNameId = 'first-name';
+        // = это оператор присваивания ... то есть то что слева (переменная), ей присваивается значение справа. 
+        //var firstNameEl = document.getElementById(firstNameId);
+
+        // а можно не создавать отдельную переменную для id и сразу передавать значение id в метод getElementById
+        var firstNameEl = document.getElementById('first-name');
+        var lastNameEl = document.getElementById('last-name');
+        var addressEl = document.getElementById('address');
+        var citiesEl = document.getElementById('cities');
+        var hobbiesEl = document.getElementById('hobbies');
+        var avatarWrapperEl = document.getElementById('avatar-wrapper');
+        var avatarEl = document.getElementById('avatar');
+        // то это значит, что firstNameEl.value приобретёт новое значение 'Andrey'  
+        firstNameEl.value = 'Andrey';
+        citiesEl.value = "Minsk";
+        lastNameEl.value = 'Petrov';
+        avatarEl.src = 'ggg400x400.jpg';
+        avatarWrapperEl.innerHTML = '<ul id="technologies-list"><li>js</li><li>css</li></ul>';
+window.alert('hallo')
+       
+    }
+     
+
+</script>
+
+<style>
+.butt {
+    border: 2px solid red;
+    background-color: blue;
+    border: 2px;
+    height: 50px;
+    width: 100px;
+    padding: 4px;
+    transform: rotate(-45deg);
+    margin-top: 15px;
+}
+
+
+</style>

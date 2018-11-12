@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .danger {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="first-name" value='1'class=''>
+    <input type="text" id="last-name" value='2'>
+    <input type="text" id="address" value='3'>
+    <input type="text" id="address" value='4'>
+    <textarea type ='text'> текст</textarea >
+     <textarea id ='text' class="must-be-dunger dszdf"> текст</textarea > 
+        
+
+    <script>
+        var elements = document.getElementsByTagName('input');
+        console.log(elements.length)
+
+        function dangerIfValueIs(elements) {
+            for (var i = 0; i < elements.length; i++) {
+                let elValue = elements[i].value;
+                if (elValue > 1 && elValue < 4) {
+                    elements[i].classList.add('danger');
+                }
+            }
+        }
+
+        dangerIfValueIs(elements);
+
+
+
+        function dangerIfTextarea(array) {
+            
+                // for (let i = 0; i < array.length; i++){
+                //     array[i].classList.add('danger');
+                // }
+                array.forEach((item) =>{
+                    item.classList.add('danger');
+                    // if(item.classList.contains('must-be-dunger')){
+                    //     item.classList.add('danger');
+                    // }
+                });            
+            }     
+                 dangerIfTextarea(document.querySelectorAll('textarea')); 
+
+
+
+
+
+
+
+
+
+                // function dangerIfValueIs2(elements) {
+        //     for (var i = 0; i < elements.length; i++) {
+        //         if (elements[i].value === '2') {
+        //             elements[i].classList.add('danger');
+        //         }
+        //     }
+        // }
+        // dangerIfValueIs2(elements);
+
+
+
+        // function dangerIfValueIs3(elements) {
+        //     for (var i = 0; i < elements.length; i++) {
+        //         if (elements[i].value === '3') {
+        //             elements[i].classList.add('danger');
+        //         }
+        //     }
+        // }
+        // dangerIfValueIs3(elements);
+    </script>
+</body>
+
+</html>

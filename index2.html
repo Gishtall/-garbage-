@@ -1,0 +1,93 @@
+<div class="main-content">
+    <div class='main-info'>
+        <img class='image' src='ggg400x400.jpg' alt='отличный парень'>
+    </div>
+    <div class="wrapper-container">
+        <span>Name:</span>
+        <input id='first-name' value='Dmitry' class='first-name-input' />
+        <span>Last name:</span>
+        <input id='last-name' value='Petrov' class='last-name-input' />
+        <span>Address:</span>
+        <input id='adress' value='dom15' class='adress-input' />
+        <span>City:</span>
+        <select id='option'>
+            <option value="M">Moscow</option>
+            <option value="m" selected>Minsk</option>
+            <option value="k">Kiev</option>
+        </select>
+        <span>Hobbies:</span>
+        <textarea id='texthobby'>семья, дети ,дом работа</textarea>
+    </div>
+
+</div>
+
+
+<script>
+    // находим элемент по айдишнику и  результат (найденный элемент) присваиваем переменной firstNameEl
+
+    var firstNameEl = document.querySelector('#first-name');
+    var lastNameEl = document.querySelector('.last-name-input');
+    var adressNameEl = document.querySelector('#adress');
+    var optionEl = document.querySelector('select');
+    var textareaEl = document.querySelector('#texthobby');
+    // выводим в консоль значение атрибута value у найденного элемента    
+    console.log(firstNameEl.value);
+    console.log(firstNameEl.className);
+    console.log(lastNameEl.value);
+    console.log(adressNameEl.value);
+    console.log(adressNameEl.value);
+    console.log(optionEl.value);
+    console.log(textareaEl.value);
+    console.log(textareaEl.innerHTML);
+
+</script>
+
+
+<style>
+    html, body  {
+        margin:0 auto;
+    }
+    input,
+    select {
+        /* width: 100%; */
+        margin: 0 0 5px 0;
+        height: 30px;
+    }
+
+    /* select {
+        margin: 0 0 20px 0;
+        height: 30px;
+    } */
+    span {
+        margin: 5px 0;
+        font-size: 12px;
+        color: white;
+    }
+    .main-content {
+        margin: 20px auto;
+        padding: 20px;
+        /* border: 1px solid rgb(0, 255, 42); */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: max-content;
+        background-color: palevioletred
+
+
+    }
+
+    .main-info {
+        /* border: 1px solid rgb(45, 9, 247); */
+        display: flex;
+        flex-direction: column;
+        margin-right: 50px;
+
+    }
+
+    .wrapper-container {
+        display: flex;
+        flex-direction: column;
+
+        /* border: 1px solid red; */
+    }
+</style>

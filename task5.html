@@ -1,0 +1,164 @@
+<input type="text" id="first-name">
+<input type="text" id="last-name">
+<input type="text" id="address">
+<textarea id='texthobby'>прпрпрпрпрпрпрп</textarea>
+<div>
+    <img id="avatar" src="mask.jpg" width="450px" height="350px" margin='150px'>
+</div>
+<a href="#" onclick="showFun()">тискаем каб працавала</a>
+<div id="myShowBlock">щас спрачусь</div>
+<input id='counter' value="0">
+
+<script>
+
+    // setErrorValue();
+    // setSuccessValue();
+    // setErrorValue();
+    // setSuccessValue();
+    function setErrorClass() {
+        var firstNameEl = document.querySelector("#first-name");
+        var lastNameEl = document.querySelector("#last-name");
+        var addressEl = document.querySelector("#address");
+
+        // firstNameEl.value = 'ERROR';
+        // lastNameEl.value = 'ERROR';
+        // addressEl.value = 'ERROR';
+
+
+        // firstNameEl.value = 'SUCCESS';
+        // lastNameEl.value = 'SUCCESS';
+        // addressEl.value = 'SUCCESS';
+
+        // firstNameEl.value = 'ERROR';
+        // lastNameEl.value = 'ERROR';
+        // addressEl.value = 'ERROR';
+
+        // firstNameEl.value = 'SUCCESS';
+        // lastNameEl.value = 'SUCCESS';
+        // addressEl.value = 'SUCCESS';
+
+        function setErrorValue() {
+            firstNameEl.value = 'ERROR';
+            lastNameEl.value = 'ERROR';
+            addressEl.value = 'ERROR';
+        };
+        // setErrorValue();
+
+
+        function setSuccessValue() {
+            firstNameEl.value = 'SUCCESS';
+            lastNameEl.value = 'SUCCESS';
+            addressEl.value = 'SUCCESS';
+        };
+        // setSuccessValue();
+
+
+
+        // var newValue = "ERROR";
+        // firstNameEl.value = newValue;
+        // lastNameEl.value = newValue;
+        // addressEl.value = newValue;
+
+        // var newValue = "SUCCESS";
+        // firstNameEl.value = newValue;
+        // lastNameEl.value = newValue;
+        // addressEl.value = newValue;
+
+
+        function setErrorToAllInputs(newValue) {
+            firstNameEl.value = newValue;
+            lastNameEl.value = newValue;
+            addressEl.value = newValue;
+        }
+        setErrorToAllInputs("Error");
+        setErrorToAllInputs("SUCCESS");
+
+
+        function oEladdClassEl(idEl, classEl) {
+            let firstNameEl = document.querySelector(idEl);
+            firstNameEl.classList.add(classEl);
+
+        }
+        // addClassToEl1("#first-name", 'Error');
+        // addClassToEl1("#last-name", 'SUCCESS');
+        // addClassToEl1("#address", 'error');
+        var class1 = document.querySelector("#first-name");
+
+        function setError(idEl) {
+            oEladdClassEl(idEl, "error");
+
+        }
+        setError('#first-name');
+        setError("#address");
+        setError("#texthobby");
+        setError("#avatar");
+
+        function sayHallo() {
+            alert('myNameSeterror');
+        }
+        // sayHallo(setTimeout, 1000, '#first-name');
+
+
+
+    }
+    setErrorClass();
+
+
+
+    var visible = true;
+    function showFun() {
+        if (visible) {
+            document.getElementById('myShowBlock').style.display = 'none';
+            visible = false;
+        } else {
+            document.getElementById('myShowBlock').style.display = 'block';
+            visible = true;
+        }
+    }
+
+
+    function sec() {
+        console.log("прошла секунда")
+    }
+
+    // setInterval(sec, 1000) // использовать функцию
+    // setTimeout(sec, 2000)
+
+
+
+
+    var inputCount = document.querySelector('#counter');
+    function inputCounter() {
+inputCount.value ++
+
+    }
+// setInterval(inputCounter,1000)
+
+
+
+
+
+function getSum(num1,num2){
+
+    return Number(num1) + Number(num2); 
+  
+}
+var bbb = getSum('1', '4');
+console.log (bbb);
+
+
+
+
+
+
+
+</script>
+<style>
+    .Error {
+        border: 1px solid red
+    }
+
+    .SUCCESS {
+        border: 1px solid green
+    }
+</style>

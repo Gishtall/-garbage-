@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <span id='status' class="visible">status-new</span>
+    <div id="set-status" class="hidden">
+        <input id="input-status" type="text" value="status-new"/>
+        <input id="save-button" type="button" value="saved"/>
+    </div>
+    <script>
+    
+    var currentStatus = document.querySelector('#status');
+    var inputStatus = document.querySelector('#input-status');
+    var saveButton = document.querySelector('#save-button');
+    var setStatus = document.querySelector('#set-status');
+
+     function showInput(){
+         currentStatus.className = 'hidden';
+         setStatus.className = 'visible';
+     }
+     function showInput(){
+         currentStatus.className = 'visible';
+         setStatus.className = 'hidden';
+     } 
+
+     function getNewStatus() {
+         currentStatus.innerHTML = inputStatus.value;
+         hiddenInput();  
+     }
+
+     function changeStatus() {
+       currentStatus.innerHTML = inputStatus.value
+     }
+
+    
+    
+    
+    </script>
+
+</body>
+</html>

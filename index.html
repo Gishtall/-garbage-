@@ -1,0 +1,46 @@
+
+
+<input id='first-name' value='Dmitry' class='first-name-input' />
+<input id='last-name' value='Petrov' class='last-name-input' />
+<input id='adress' value='dom15' class='adress-input'/>
+<select id='option'>
+    <option value="M">Moscow</option>
+    <option value="m" selected>Minsk</option>
+    <option value="k">Kiev</option>
+</select><br>
+<textarea id='texthobby'>семья, дети ,дом работа</textarea>
+<div class='img-container'>
+    <img class='image' src='ggg400x400.jpg'alt='отличный парень'>
+</div> 
+
+
+<script>
+    // находим элемент по айдишнику и  результат (найденный элемент) присваиваем переменной firstNameEl
+
+    var firstNameEl = document.getElementById('first-name');
+    var lastNameEl = document.getElementById('last-name');
+    var adressNameEl = document.getElementById('adress');
+    var optionEl = document.getElementById('option');
+    var textareaEl = document.getElementById('texthobby');
+    // выводим в консоль значение атрибута value у найденного элемента    
+    console.log(firstNameEl.value);
+    console.log(firstNameEl.className);
+    console.log(lastNameEl.value);
+    console.log(adressNameEl.value);
+    console.log(adressNameEl.value);
+    console.log(optionEl.value);
+    console.log(textareaEl.value);
+    console.log(textareaEl.innerHTML);
+
+</script>
+
+
+<style>
+    .img-container {
+        border: 2px solid red;
+    }
+
+    input {
+        display: block;
+    }
+</style>

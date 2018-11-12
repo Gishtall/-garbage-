@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+<input id='pass' type='password'>
+<input id='myButton' type='submit' value="show pass">
+<script>
+    var field = document.getElementById('pass');
+    function changeMe(){
+        if (field.type === 'password'){
+            field.type = 'text';
+        }
+        else{
+            field.type ='password';
+        }
+        
+    }
+
+    var but = document.getElementById('myButton');
+    but.addEventListener('click', changeMe);
+</script>
+</body>
+</html>

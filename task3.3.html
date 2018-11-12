@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form class="main">
+        <div class="line 5">
+            <img id="avatar" src="вова.jpg" alt="Димасик" width="450px" height="350px" class='ava'>
+        </div>
+        <div class="line1">
+            <label for="first-name" class="first">first name: <br></label>
+            <input type="text" id="first-name" value="Dmitriy">
+        </div>
+        <div class="line2">
+            <label for="second-name" class="second">second name: <br></label>
+            <input type="text" id="second-name" value="MedvedZev">
+        </div>
+        <div class="line6">
+            City:
+            <select id='cities'>
+                <option value="Pendostan">Pendostan</option>
+                <option value="Minsk">Minsk</option>
+                <option value="Moscow" selected>Moscow</option>
+            </select>
+        </div>
+        <div>
+            <br> <label>About me</label> <br>
+            <textarea class="aboutMe" id="aboutMe" rows="5" cols="40"> импортозамещение, денег нет, но вы держитесь,  и пейте russiano</textarea>
+            <input type="button" id="change" value="change" class="button">
+        </div>
+
+        <div class="line3">
+            <br>Sex<br>
+            <input name="sex" type="radio" value="m" id="sexm" class="sexm" checked>M
+            <input name="sex" type="radio" value="f" id="sexf" class="sexf">f
+        </div>
+
+        <div class="line4">
+            <input type="checkbox" id="check" class="box" checked in="check">
+            <label for="single">Single</label>
+
+        </div>
+    </form>
+
+    <script>
+        var firstNameEL = document.querySelector("#first-name");
+        var secondNameEL = document.querySelector("#second-name");
+        var sexmNameEL = document.querySelector("#sexm");
+        var sexfNameEL = document.querySelector("#sexf");
+        var placeNameEL = document.querySelector("#cities");
+        var singleNameEL = document.querySelector(".box");
+        var aboutMeNameEL = document.querySelector("#aboutMe");
+        var avatarNameEL = document.querySelector("#avatar");
+        var changebutton = document.querySelector("#change");
+
+        setTimeout(function () {
+            firstNameEL.value = "Aliaksandr";
+            secondNameEL.value = "Luchashenko";
+            sexmNameEL.checked = "false";
+            sexfNameEL.checked = "true";
+            placeNameEL.value = "Minsk"
+            aboutMeNameEL.innerHTML = "димка, я тебя умаляю, Чай З малинавым варэннем ванлафф";
+            avatarNameEL.src = "lukashenka_w_tea1007.jpg";
+        }, 1000);
+        changebutton.addEventListener("click", function () {
+            firstNameEL.value = "Elon";
+            secondNameEL.value = "Musk";
+            placeNameEL.value = "Pendostan";
+            aboutMeNameEL.innerHTML = "Саня, харэ кодить, вали спать, час ночи!!!!!!";
+            avatarNameEL.src = "mask.jpg";
+        });
+
+    </script>
+</body>
+
+</html>

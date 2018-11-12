@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="first-name" value='1'>
+    <input type="text" id="last-name" value='2'>
+    <input type="text" id="address" value='3'>
+    
+
+
+
+
+    <script>
+        var elements = document.getElementsByClassName('2');
+        dangerIfValueIs2(elements);
+        for (var i = 0; i < 3; i++) {
+            alert(i); // 0, 1, 2
+        }
+
+
+
+        function removeElement(paramId) {
+
+            var element = document.getElementById(paramId);
+            if (element != null) {
+                element.remove();
+            } else {
+                console.warn('Элемент не найден');
+            }
+
+        }
+        //removeElement("last-name");
+
+        function dangerIfValueIs2() {
+
+
+        }
+
+
+    </script>
+    <style>
+        .city {
+            border: 1px, solid, blue
+        }
+    </style>
+</body>
+
+</html>

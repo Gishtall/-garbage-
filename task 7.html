@@ -1,0 +1,46 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .danger {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="first-name" value='1'>
+    <input type="text" id="last-name" value='2'>
+    <input type="text" id="address" value='3'>
+    <input type="text" id="address" value='4'>
+    <textarea type='text'> текст</textarea>
+    <textarea id='text' class="must-be-danger"> текст</textarea>
+
+
+    <script>
+         let elements = document.getElementsByTagName('input');
+         console.log(elements.length)
+
+        var dangerIfValueIs = (elements) => {
+            for (var i = 0; i < elements.length; i++) {
+                let elValue = elements[i].value;
+                if (elValue > 1 && elValue < 4) {
+                    elements[i].classList.add('danger');
+                }
+            } 
+        }
+
+        dangerIfValueIs(elements);
+
+
+
+        function dangerIfTextarea(array) {
+            array.forEach((item) => {
+                item.classList.add('danger'); 
+            });
+        }
+        dangerIfTextarea(document.querySelectorAll('textarea'));
+
+        
+    </script>
+</body>
