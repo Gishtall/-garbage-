@@ -23,22 +23,23 @@
          currentStatus.className = 'hidden';
          setStatus.className = 'visible';
      }
-     function showInput(){
+     function hideInput(){
          currentStatus.className = 'visible';
          setStatus.className = 'hidden';
      } 
 
      function getNewStatus() {
          currentStatus.innerHTML = inputStatus.value;
-         hiddenInput();  
+         hideInput();  
      }
 
      function changeStatus() {
-       currentStatus.innerHTML = inputStatus.value
+       inputStatus.value = currentStatus.innerHTML;
+       showInput();
      }
 
-    
-    
+    currentStatus.addEventListener('click', changeStatus);
+    saveButton.addEventListener('click', getNewStatus);
     
     </script>
 
