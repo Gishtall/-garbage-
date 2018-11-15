@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<input id='first-value' type='text' />
+<input id='second-value' type='text' />
+
+<hr />
+<button id='change-values-btn'>Change values</button>
+
+<script>
+    debugger
+var firsValue = document.querySelector('#first-value');
+var secondValue = document.querySelector('#second-value');
+var changeValuesBtn = document.getElementById('#change-values-btn');
+
+var onChangeValuesBtnClick = function () {
+	var stack = firstValue.value;
+    firstValue.value = secondValue.value;
+    secondValue.value = stack; 
+}
+changeValuesBtn.addEventListener('click',onChangeValuesBtnClick);
+
+</script>
+</body>
+</html>
