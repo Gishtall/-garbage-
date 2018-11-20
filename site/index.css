@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato|Raleway');
 
 body {
-background-color: rgb(37, 31, 1);
+background-color: rgb(192, 190, 181);
 font-family: "lato";
 font-weight: 300;
 font-size: 20px;
@@ -15,9 +15,9 @@ margin-top: 0px;
 h1,h2,h3,h4,h5,h6{
     font-family: "raleway";
     font-weight: bold;
-    color: rgb(253, 253, 253); 
-    -webkit-text-fill-color: rgb(253, 253, 253); 
-    -webkit-text-stroke: 0.5px black;
+    color: rgb(233, 233, 233); 
+    -webkit-text-fill-color: rgb(221, 221, 221); 
+    -webkit-text-stroke: 0.5px rgb(43, 43, 43);
 }
 
 p{
@@ -30,11 +30,11 @@ p{
 }
 
 a{
-    color: rgb(231, 229, 68);
+    color: rgb(228, 228, 228);
 }
 
 a:hover, a:focus {
-    color: rgb(250, 71, 26);
+    color: rgb(20, 39, 73);
     text-decoration: none;
     outline: 0;
 }
@@ -43,7 +43,7 @@ hr {
     display: block;
     height: 1px;
     border:0;
-    border-top: 1px solid rgb(73, 55, 32);
+    border-top: 1px solid rgb(168, 161, 151);
     margin: 1em 0;
     padding: 0;
 }
@@ -53,14 +53,14 @@ hr {
     font-size: 15px;
     padding-top: 15px;
     padding-bottom: 15px; 
-    background: rgb(87, 83, 63); 
+    background: rgb(172, 169, 157); 
     
 }
 
 .navbar-expand-lg .navbar-collapse {
     justify-content: flex-end;
     background: rgb(124, 124, 111);
-    border-color: rgb(175, 173, 35);
+    border-color: rgb(48, 48, 38);
 }
 
 .navbar-brand{
@@ -68,12 +68,12 @@ hr {
 }
 
 .navbar-toggler{
-    background: rgb(209, 207, 60);
+    background: rgb(167, 166, 124);
     opacity: .3;
 }
 
 .navbar-toggler:focus{
-    outline-color: rgb(250, 71, 26);
+    outline-color: rgb(20, 39, 73);
 }
 
 #headerwrap{
