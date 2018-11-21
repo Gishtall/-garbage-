@@ -14,17 +14,19 @@
 <button id='change-values-btn'>Change values</button>
 
 <script>
-    debugger
-var firsValue = document.querySelector('#first-value');
+    
+var firstValue = document.querySelector('#first-value');
 var secondValue = document.querySelector('#second-value');
-var changeValuesBtn = document.getElementById('#change-values-btn');
+var changeValuesBtn = document.getElementById('change-values-btn');
 
 var onChangeValuesBtnClick = function () {
 	var stack = firstValue.value;
     firstValue.value = secondValue.value;
     secondValue.value = stack; 
 }
-changeValuesBtn.addEventListener('click',onChangeValuesBtnClick);
+changeValuesBtn.addEventListener('click',onChangeValuesBtnClick )
+  
+
 
 </script>
 </body>
