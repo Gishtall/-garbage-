@@ -1,21 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
- <input type='number' />
- <input type='number' />
- <input type='number' />
- <input type='number' />
- <input type='number' />
- <input type='number' />
- <input type='number' />
- <input type='number' />
- <input type='number' />
- <input type='number' />
+    <style>
+        input {
+  margin: 20px;
+}
+
+.error-value {
+  border: red 1px solid;
+}
+    </style>
+
+    <input class="input" type='number' />
+    <input class="input" type='number' />
+    <input class="input" type='number' />
+    <input class="input" type='number' />
+    <input class="input" type='number' />
+    <input class="input" type='number' />
+    <input class="input" type='number' />
+    <input class="input" type='number' />
+    <input class="input" type='number' />
+    <input class="input" type='number' />
+
+
+    <script>
+        var inputs = document.getElementsByTagName('input');
+  
+        function error(events) {
+            var currentInput = event.currentTarget;
+            if (currentInput.value < 10 || currentInput.value > 50) {
+                currentInput.classList.add('error-value');
+            }
+            else {
+                currentInput.classList.remove('error-value');
+            }
+        }
+    
+        for (i = 0; i < inputs.length; i++){
+           inputs[i].addEventListener('input', error);
+
+        }
+
+    </script>
 </body>
+
 </html>
